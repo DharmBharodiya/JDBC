@@ -18,7 +18,7 @@ public class mainWrite {
 				ResultSet rs = ps.executeQuery(query);
 				
 				
-				FileWriter fr = new FileWriter("C:/ADIT/JAVA Program/CSV FIlE/writedata.csv", true);
+				FileWriter fr = new FileWriter("C:/Users/dharm/eclipse-workspace/CSV_JAVA/files/writedata.csv", true);
 				
 				fr.append("id,name,email,mobile\n");
 				while(rs.next()) {

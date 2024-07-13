@@ -1,0 +1,31 @@
+import java.sql.*;
+import java.io.*;
+
+public class mainWrite {
+
+		private static final String url = "jdbc:mysql://localhost:3306/csv_db";
+		private static final String username = "root";
+		private static final String password = "";
+		
+		public static void main(String args[]) {
+
+			String query = "SELECT * FROM employee_tbl";
+			
+			try {
+				Class.forName("com.mysql.jdbc.cj.Driver");
+				Connection connection = DriverManager.getConnection(url, username, password);
+				PreparedStatement ps = connection.prepareStatement(query);
+				
+				FileWriter fr = new FileWriter("C:/ADIT/JAVA Program/CSV FIlE/writedata.csv");
+				CSVWriter cw = new CSVWriter(fr);
+				
+				ps.execute();
+				while
+			
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+			
+		}
+	
+}

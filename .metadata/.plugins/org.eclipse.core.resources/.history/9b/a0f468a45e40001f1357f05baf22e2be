@@ -1,0 +1,30 @@
+import java.sql.Connection;
+import java.sql.Driver;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+public class main {
+	
+	private static final String url = "jdbd:mysql://localhost:3306/csv_db";
+	private static final String username = "root";
+	private static final String password = "";
+	
+	public static void main(String args[]) {
+		
+		try {
+			Class.forName("com.mysql.jdbc.cj.Driver");
+			Connection connection = DriverManager.getConnection(url, username, password);
+			PreparedStatement ps = connection.prepareStatement("INSERT INTO employee_tbl (name, email, mobile) VALUES(?,?,?)");
+			
+			ps.setString(1, "Dharm");
+			ps.setString(2, "dharm@gmail.com");
+			ps.setString(3, "9106868415");
+			
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+}

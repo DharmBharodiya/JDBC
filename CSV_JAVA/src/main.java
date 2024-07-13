@@ -18,7 +18,7 @@ public class main {
 			Connection connection = DriverManager.getConnection(url, username, password);
 			PreparedStatement ps = connection.prepareStatement("INSERT INTO employee_tbl (name, email, mobile) VALUES(?,?,?)");
 			
-			FileReader fr = new FileReader("C:/ADIT/JAVA Program/CSV FIlE/fakedata.csv");
+			FileReader fr = new FileReader("C:/User/dharm/eclipse-workspace/CSV_JAVA/files/fakedata.csv");
 			BufferedReader br = new BufferedReader(fr);
 			
 			String line = null;
