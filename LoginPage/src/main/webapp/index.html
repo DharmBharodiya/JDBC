@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - DHRM</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div id="divContainer">
+        <h1 id="mainhead">DHRM</h1>
+        <div id="formContainer">
+            <form action="DataServlet" method="get">
+                <div class="formElement">
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" name="firstname" placeholder="Enter firstname.">
+                </div>
+                <div class="formElement">
+                    <label for="email">E-mail: </label>
+                    <input type="email" id="email" name="email" placeholder="Enter e-mail.">
+                </div>
+                <div class="formElement">
+                    <label for="mobile">Mobile: </label>
+                    <input type="text" name="mobile" id="mobile" placeholder="Enter mobile number.">
+                </div>
+                <div class="formElement">
+                    <label for="department">Department: </label>
+                    <input type="text" name="department" id="department" placeholder="Enter department.">
+                </div>
+                <div class="formElement">
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="password" placeholder="Enter password.">
+                </div>
+                <div class="formElement" id="btn">
+                    <button type="submit">Submit</button>    
+                </div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
