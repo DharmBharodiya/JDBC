@@ -25,6 +25,7 @@ public class DataServlet extends HttpServlet {
         String mobile = request.getParameter("mobile");
         String password = request.getParameter("password");
 
+        
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
