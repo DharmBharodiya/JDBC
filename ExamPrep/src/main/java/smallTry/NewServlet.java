@@ -35,6 +35,10 @@ public class NewServlet extends HttpServlet{
 		out.println("BOSS: " + name);
 		out.println("<br>");
 		out.println("Ganpati Bappa, " + name2);
+		
+		if(session != null) {
+			session.invalidate();
+		}
 	}
 		
 	
