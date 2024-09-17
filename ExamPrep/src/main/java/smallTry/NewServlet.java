@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
+import javax.servlet.http.Cookie;
 
 public class NewServlet extends HttpServlet{
 	
@@ -23,11 +24,18 @@ public class NewServlet extends HttpServlet{
 		out.println("Hello world, welcome to the servlet.");
 		
 		ServletConfig config = getServletConfig();
+		
 
 		ServletContext context = getServletContext();
 		HttpSession session = request.getSession(false);
 		out.println("Welcome, " + session.getAttribute("username"));
 		out.println("<br>");
+		
+		Cookie cookies[] = request.getCookies();
+		String username = (String)cookies[0].getValue();
+		
+		out.println("Welcome To Your Profile: " + username);
+		out.println();
 		
 		String name2 = context.getInitParameter("GanpatiBappa");
 		

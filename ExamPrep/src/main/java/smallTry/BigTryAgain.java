@@ -58,6 +58,7 @@ public class BigTryAgain {
 			System.out.println("Comlumnname: " + columnname + " ColumnCount: " + columncount + " ColumTypeName: " + columntypename + " TableName: " + tablename);
 			
 			rs.moveToInsertRow();
+			rs.moveToCurrentRow();
 			rs.updateString("firstname", "Yahoo");
 			rs.updateString("lastname", "GOOGLE");
 			rs.updateString("mobile","86987324");

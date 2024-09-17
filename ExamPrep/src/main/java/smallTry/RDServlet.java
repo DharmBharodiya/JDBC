@@ -1,6 +1,7 @@
 package smallTry;
 
 import java.io.IOException;
+import javax.servlet.http.Cookie;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -24,6 +25,11 @@ public class RDServlet extends HttpServlet{
 		String password = request.getParameter("password");
 		HttpSession session = request.getSession();
 		session.setAttribute("username" , username);
+		
+
+		Cookie ck = new Cookie("AUTHUSER", username);
+		response.addCookie(ck);
+		
 		
 		if(password.equals("dharmrocks")) {
 			rd = request.getRequestDispatcher("NewServlet");
