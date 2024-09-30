@@ -3,7 +3,7 @@
 <%@ page import="javax.servlet.*,javax.servlet.http.*, java.sql.*" %>
 <% 
 
-	String url = "jdbc:mysql://localhost:2206/jspauthenticate_db";
+	String url = "jdbc:mysql://localhost:3306/jspauthenticate_db";
 	String username = "root";
 	String password = "";
 	

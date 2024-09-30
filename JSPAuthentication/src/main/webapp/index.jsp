@@ -44,7 +44,7 @@
 </head>
 <body>
 	<h1>Welcome, Register Yourself.</h1>
-	<form action="newDB.jsp" method="post">
+	<form action="welcome.jsp" method="post">
 	<div>
 			Username: <input type="text" placeholder="Enter username" name="username">
 	</div>
