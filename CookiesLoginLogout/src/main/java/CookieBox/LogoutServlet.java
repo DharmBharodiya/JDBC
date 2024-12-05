@@ -22,7 +22,7 @@ public class LogoutServlet extends HttpServlet {
     	request.getRequestDispatcher("link.html").include(request, response);
     	
     	Cookie ck = new Cookie("name",""); // here we removed the cookie basically, and as the cookie will be removed the user will logout on its own
-    	ck.setMaxAge(0);//we won't live it for a moment also
+    	ck.setMaxAge(0);//cookie won't live it for a moment also
     	response.addCookie(ck);
     	
     	out.print("Logged Out SuccessFully.");
